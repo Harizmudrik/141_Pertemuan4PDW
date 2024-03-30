@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Pertemuan 3</title>
+    <title>Pertemuan 5 (exercise)</title>  
 </head>
-
-<body>
-    <div class="card">
-        <img src="./assets/download.jpeg" alt="Poster">
+<body style="background-color: rgba(127, 127, 213, 0.6); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    <div class="card" style="background: linear-gradient(to right, #ffffff, #ece9e6); width: 400px; margin: 20px;">
+        <img src="images/gudeg.jpg" alt="Poster" width="400px" height="300px">
         <div class="text">
-            <h2>Malam Hari di Yogya
-                
-            </h2>
-            
-            <p>Malam hari kota Jogja
-                Mulai terasa nyaman kembali dan dingin
-                Sekarang terasa segar dan tentram
-                Malam hari di kota Jogja
-                Suasana indah disambut mesra bulan Oktober
-                Semoga bulan Oktober suasana Jogja semakin indah makin tentram
-                Memang benar yang dikatakan orang-orang
-                Kalau Kota Jogja itu nyeremin
-            </p>
+            <h2 class="text-center">Gudeg</h2>
+            <p class="text-center">Gudeg (Jawa: Guděg) adalah hidangan khas Daerah Istimewa Yogyakarta yang terbuat dari nangka muda yang dimasak dengan santan. Sajian khas gudeg. Perlu waktu berjam-jam untuk membuat hidangan gudeg. Warna cokelat biasanya dihasilkan oleh daun jati yang dimasak bersamaan.</p>
         </div>
     </div>
-</body>
+    <div class="card" style="background: linear-gradient(to right, #ffffff, #ece9e6); width: 400px; margin: 20px;">
+        <img src="images/bakpia.jpg" alt="Poster" width="400px" height="250px">
+        <div class="text">
+            <h2 class="text-center">Bakpia Yogyakarta</h2>
+            <p class="text-center">Bakpia adalah makanan yang terbuat dari tepung terigu yang dipanggang dengan isian berupa kacang hijau dicampur gula</p>
+        </div>
+    </div>
 
+    <div class="login-container" style="background-color: #827978; width: 400px; padding: 20px; margin: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(133, 51, 51, 0.1);">
+        <h1 class="text-center">Pemesanan</h1>
+        <form id="loginForm" class="form-container">
+            <label for="password"></label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var isSuccess = true; // Ubah menjadi false jika login gagal
+            if (isSuccess) {
+                Swal.fire("SABAR YAA!", "INGET PUASA JAN MOKEL!", "success"); //Pesan yang keluar ketika berhasil
+            } else {
+                Swal.fire("Oops...", "Alhamdulillah Masih Puasa", "error"); //pesan yang keluar ketika gagal 
+            }
+        });
+    </script>
+    <script src="./script/main.js"></script>
+</body>
 </html>
